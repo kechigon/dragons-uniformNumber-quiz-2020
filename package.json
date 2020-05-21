@@ -1,0 +1,11 @@
+{
+  "name": "NPB-uniformNumber-quiz-2020",
+  "version": "1.0.0",
+  "description": "a quiz to guess players from the uniform number",
+  "main": "index.js",
+  "repository": "https://github.com/kechigon/NPB-uniformNumber-quiz-2020",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "license": "MIT"
+}
