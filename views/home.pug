@@ -2,6 +2,19 @@ doctype html
 html(lang="ja")
   head
     meta(charset="UTF-8")
-    title 秘密の匿名掲示板
+    title 背番号クイズ
   body
     h1 プロ野球背番号クイズ2020
+    form(action="/posts", method="post")
+      button(type="submit" name="team" value="gomiuri") G
+      button(type="submit" name="team" value="baystars") DB
+      button(type="submit" name="team" value="tigers") T
+      button(type="submit" name="team" value="carp") C
+      button(type="submit" name="team" value="dragons") D
+      button(type="submit" name="team" value="swallows") S
+      button(type="submit" name="team" value="lions") L
+      button(type="submit" name="team" value="hawks") H
+      button(type="submit" name="team" value="eagles") E
+      button(type="submit" name="team" value="marines") M
+      button(type="submit" name="team" value="fighters") F
+      button(type="submit" name="team" value="buffaloes") Bs
