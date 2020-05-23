@@ -5,4 +5,12 @@ html(lang="ja")
     title 中日背番号クイズ
   body
     h1 中日ドラゴンズ背番号クイズ2020
-    
+    h2 #{uniformNumber}
+    form(action="/posts", method="post")
+      input(type="radio" name="selectPlayer" value=1) 
+      | #{player1}
+      input(type="radio" name="selectPlayer" value=2) 
+      | #{player2}
+      input(type="radio" name="selectPlayer" value=3) 
+      | #{player3}
+      button(type="submit") 答え
