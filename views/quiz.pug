@@ -2,26 +2,41 @@ doctype html
 html(lang="ja")
   head
     meta(charset="UTF-8")
-    title 中日背番号クイズ
+    link(rel="stylesheet",
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7",
+    crossorigin="anonymous")
+    link(rel="stylesheet",
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css",
+    integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r",
+    crossorigin="anonymous")
     style(type="text/css")
-  body
-    h1 中日ドラゴンズ背番号クイズ2020
-    h2 #{uniformNumber}
-      p #{player1}
-      p #{player2}
-      p #{player3}
-      button(onClick="document.getElementById('answer').style.display = 'block';") 答え
-      div(id="answer" style="display: none;")
-        case subjectPlayer
-          when 1
-            p #{player1}
-            -break
-          when 2
-            p #{player2}
-            -break
-          when 3
-            p #{player3} 
-            -break
-          default 
-            -break  
-        a(href="/gets") もう一度
+
+    title 中日背番号クイズ
+  body(class="container")
+    h1(class="jumbotron") 中日ドラゴンズ背番号クイズ2020
+    p(class="text-center", style="font-size: 30px") #{uniformNumber}
+    br
+    p(class="text-center") #{player1}
+    p(class="text-center") #{player2}
+    p(class="text-center") #{player3}
+    button(class="center-block", onClick="document.getElementById('answer').style.display = 'block';", class="btn btn-info") 答え
+    div(id="answer", style="display: none;")
+      br
+      case subjectPlayer
+        when 1
+          p(class="text-center") #{player1}
+          -break
+        when 2
+          p(class="text-center") #{player2}
+          -break
+        when 3
+          p(class="text-center") #{player3} 
+          -break
+        default 
+          -break  
+      a(href="/gets", class="btn btn-info pull-right") もう一度
+    script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js",
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS",
+    crossorigin="anonymous")  
