@@ -3,14 +3,25 @@ html(lang="ja")
   head
     meta(charset="UTF-8")
     title 中日背番号クイズ
+    style(type="text/css")
   body
     h1 中日ドラゴンズ背番号クイズ2020
     h2 #{uniformNumber}
-    form(action="/posts", method="post")
-      input(type="radio" name="selectPlayer" value=1) 
-      | #{player1}
-      input(type="radio" name="selectPlayer" value=2) 
-      | #{player2}
-      input(type="radio" name="selectPlayer" value=3) 
-      | #{player3}
-      button(type="submit") 答え
+      p #{player1}
+      p #{player2}
+      p #{player3}
+      button(onClick="document.getElementById('answer').style.display = 'block';") 答え
+      div(id="answer" style="display: none;")
+        case subjectPlayer
+          when 1
+            p #{player1}
+            -break
+          when 2
+            p #{player2}
+            -break
+          when 3
+            p #{player3} 
+            -break
+          default 
+            -break  
+        a(href="/gets") もう一度
