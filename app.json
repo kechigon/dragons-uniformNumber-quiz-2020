@@ -1,0 +1,8 @@
+{
+  "name": "dragons-uniformNumber-quiz-2020",
+  "description": "",
+  "repository": "https://github.com/kechigon/dragons-uniformNumber-quiz-2020",
+  "logo": "",
+  "keywords": ["node"],
+  "image": "heroku/nodejs"
+}
